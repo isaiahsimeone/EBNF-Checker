@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <sstream>
 
 #include "token.hpp"
 #include "location.hpp"
@@ -10,9 +12,9 @@
 
 class Lexer {
     private:
-    
+        std::string symbols;
     public:
-        Lexer(std::ofstream&);
+        Lexer(std::ifstream&);
         LexicalToken* get_next_token();
 };
 

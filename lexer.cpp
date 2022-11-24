@@ -1,8 +1,12 @@
 #include "lexer.hpp"
 
-Lexer::Lexer(std::ofstream& grammar) {
+Lexer::Lexer(std::ifstream& grammar) {
     // Read the file into memory and close it
     std::cout << "INITIALISED LEXER" << std::endl;
+
+    std::stringstream buffer;
+    buffer << grammar.rdbuf();
+    std::cout << buffer.str() << std::endl;
 }
 
 /*

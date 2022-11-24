@@ -7,9 +7,10 @@ int main(int argc, char** argv) {
 
     cout << "HELLO" << endl;
 
-    ofstream source("source.txt");
+    ifstream grammar("source.txt");
 
     /* Convert the source file to a token stream */
-    Lexer* lexer = new Lexer(source);
+    Lexer* lexer = new Lexer(grammar);
+
 
 }

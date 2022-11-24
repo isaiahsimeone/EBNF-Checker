@@ -10,8 +10,9 @@ class LexicalToken {
         Location* loc;
     public:
         LexicalToken(Token, Location*);
-        Token get_type();
-        Location* get_location();
+        Token       get_type();
+        Location*   get_location();
+        bool        matches(Token);
 };
 
 #endif /* H_LEXICAL_TOKEN */

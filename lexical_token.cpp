@@ -12,3 +12,7 @@ Token LexicalToken::get_type() {
 Location* LexicalToken::get_location() {
     return loc;
 }
+
+bool LexicalToken::matches(Token type) {
+    return this->type == type;
+}
